@@ -1,40 +1,54 @@
 "use client";
 
 import Link from "next/link";
+import { memo } from "react";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
-export default function CTABand() {
+const CTABand = memo(() => {
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-500" />
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 opacity-90" />
+    <section className="relative px-4 sm:px-6 lg:px-8 py-20 overflow-hidden bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600">
+      {/* Background effects */}
+      <div className="absolute inset-0 -z-10 opacity-30">
+        <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-purple-400 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-purple-400 rounded-full blur-3xl" />
+      </div>
 
-      {/* Glow effects */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-400/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-700/20 rounded-full blur-3xl" />
+      <div className="container mx-auto max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center space-y-8"
+        >
+          <div className="space-y-4">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-white">
+              Ready to Deploy Your Voice Agent?
+            </h2>
+            <p className="text-lg md:text-xl text-purple-100 max-w-2xl mx-auto">
+              Join hundreds of businesses already automating with SentientLabs.
+            </p>
+          </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 text-center space-y-8">
-        {/* Heading */}
-        <h2 className="text-5xl sm:text-6xl font-bold text-white leading-tight max-w-3xl mx-auto">
-          Ready to Deploy Your Voice Agent?
-        </h2>
-
-        {/* Subheading */}
-        <p className="text-xl text-purple-100 max-w-2xl mx-auto">
-          Join hundreds of businesses already automating with SentientLabs.
-        </p>
-
-        {/* CTA Button */}
-        <div className="flex justify-center pt-4">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-white text-purple-600 px-8 py-4 text-lg font-semibold hover:bg-purple-50 transition-all shadow-2xl hover:shadow-3xl"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Book a Demo <ArrowRight size={22} />
-          </Link>
-        </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30 px-8 py-4 text-base font-semibold text-white hover:bg-white/30 transition-all"
+            >
+              Book a Demo
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
-}
+});
+
+CTABand.displayName = "CTABand";
+
+export default CTABand;
