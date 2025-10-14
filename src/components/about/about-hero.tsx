@@ -10,8 +10,8 @@ export default function AboutHero() {
           About <span className="text-primary">SentientLabs</span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground">
-          We're on a mission to transform business communication through intelligent 
-          AI voice agents. Founded in 2021, we've helped over 500 businesses automate 
+          We&apos;re on a mission to transform business communication through intelligent 
+          AI voice agents. Founded in 2021, we&apos;ve helped over 500 businesses automate 
           and scale their customer interactions with cutting-edge voice AI technology.
         </p>
       </div>

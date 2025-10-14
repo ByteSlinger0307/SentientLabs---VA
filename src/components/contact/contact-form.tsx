@@ -35,8 +35,8 @@ export default function ContactForm() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
             <p className="text-muted-foreground mb-8">
-              Have questions? We'd love to hear from you. Send us a message and 
-              we'll respond as soon as possible.
+              Have questions? We&apos;d love to hear from you. Send us a message and 
+              we&apos;ll respond as soon as possible.
             </p>
 
             <div className="space-y-6">
@@ -163,7 +163,7 @@ export default function ContactForm() {
               {isSubmitted && (
                 <div className="bg-primary/10 border border-primary rounded-md p-4 text-center">
                   <p className="text-primary font-semibold">
-                    Message sent successfully! We'll be in touch soon.
+                    Message sent successfully! We&apos;ll be in touch soon.
                   </p>
                 </div>
               )}

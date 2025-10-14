@@ -7,11 +7,11 @@ export default function ContactHero() {
 
       <div className="container mx-auto max-w-4xl text-center">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Let's <span className="text-primary">Connect</span>
+          Let&apos;s <span className="text-primary">Connect</span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground">
           Ready to transform your business with AI voice agents? Get in touch with 
-          our team and we'll show you what's possible.
+          our team and we&apos;ll show you what&apos;s possible.
         </p>
       </div>
     </section>

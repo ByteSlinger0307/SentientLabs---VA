@@ -1,13 +1,13 @@
-import Hero from "@/components/home/hero";
-import Features from "@/components/home/features";
-import TestimonialsSection from "@/components/home/hero-sections";
+import SolutionsHero from "@/components/solutions/solutions-hero";
+import SolutionsGrid from "@/components/solutions/solutions-grid";
+import AutomationFlow from "@/components/solutions/automation-flow";
 
-export default function HomePage() {
+export default function SolutionsPage() {
   return (
     <>
-      <Hero />
-      <Features />
-      <TestimonialsSection />
+      <SolutionsHero />
+      <SolutionsGrid />
+      <AutomationFlow />
     </>
   );
 }

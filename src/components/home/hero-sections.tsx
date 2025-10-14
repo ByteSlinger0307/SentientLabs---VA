@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
               <div className="bg-muted/30 border border-border rounded-lg p-8 h-full flex flex-col">
                 <Quote className="w-8 h-8 text-primary mb-4" />
                 <p className="text-foreground mb-6 flex-1 italic">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
                 <div>
                   <p className="font-semibold text-foreground">{testimonial.author}</p>
