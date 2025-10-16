@@ -153,7 +153,7 @@ const HeroSection = memo(() => (
                 className="relative w-full h-full"
               >
                 <Image
-                  src="/images/sentientbrain.webp"
+                  src="/images/sentientbrain.png"
                   alt="AI Brain with Neural Network - Intelligent voice automation technology"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px"
