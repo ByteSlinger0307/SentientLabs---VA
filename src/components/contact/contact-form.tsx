@@ -46,7 +46,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-muted-foreground">labs.sentient@gmail.com</p>
+                  <p className="text-muted-foreground">hello@sentientlabs.digital</p>
                 </div>
               </div>
 
