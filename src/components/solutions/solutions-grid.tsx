@@ -31,28 +31,45 @@ export default function SolutionsGrid() {
   ];
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-24 bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-24 bg-muted/30">
+      {/* Consistent container width */}
+      <div className="container mx-auto max-w-7xl">
         <SlideIn>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            Use Cases & Solutions
-          </h2>
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+              Use Cases & Solutions
+            </h2>
+          </div>
         </SlideIn>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Grid with better responsive behavior */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {solutions.map((solution, index) => (
             <SlideIn key={solution.title} delay={index * 0.1}>
-              <div className="bg-background border border-border rounded-lg p-8 hover:border-primary/50 transition-colors">
-                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                  <solution.icon className="w-7 h-7 text-primary" />
+              <div className="group bg-background border border-border rounded-xl p-6 sm:p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 h-full">
+                {/* Icon container */}
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                  <solution.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">{solution.title}</h3>
-                <p className="text-muted-foreground mb-6">{solution.description}</p>
-                <div className="space-y-2">
+                
+                {/* Title */}
+                <h3 className="text-xl sm:text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  {solution.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
+                  {solution.description}
+                </p>
+                
+                {/* Benefits list */}
+                <div className="space-y-3">
                   {solution.benefits.map((benefit) => (
-                    <div key={benefit} className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-sm text-foreground">{benefit}</span>
+                    <div key={benefit} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90">
+                        {benefit}
+                      </span>
                     </div>
                   ))}
                 </div>

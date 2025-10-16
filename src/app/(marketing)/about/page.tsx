@@ -1,13 +1,13 @@
 import AboutHero from "@/components/about/about-hero";
 import ValuesGrid from "@/components/about/values-grid";
-import TimelineSection from "@/components/about/timeline-section";
+import ProcessFlowSection from "@/components/about/process-flow-section";
 
 export default function AboutPage() {
   return (
     <>
       <AboutHero />
       <ValuesGrid />
-      <TimelineSection />
+      <ProcessFlowSection />
     </>
   );
 }

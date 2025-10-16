@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: "SentientLabs | Voice Agents That Think",
@@ -48,7 +53,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        {/* Preload critical logo image */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/sentientlogo.png"
+          type="image/png"
+        />
+        {/* Preload critical hero brain image */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/sentientbrain.png"
+          type="image/png"
+          fetchPriority="high"
+        />
+        {/* Preconnect to external domains if needed */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body className={inter.className} suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }

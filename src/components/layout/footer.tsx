@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Instagram, Facebook } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 
 export default function Footer() {
@@ -45,25 +45,25 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/sentienlabsai/"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-800/50 text-gray-400 hover:bg-purple-600/20 hover:text-purple-400 transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61579598378558"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-800/50 text-gray-400 hover:bg-purple-600/20 hover:text-purple-400 transition-all"
-                aria-label="Twitter"
+                aria-label="Facebook"
               >
-                <Twitter size={18} />
+                <Facebook size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/sentientlabs.ai/"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-800/50 text-gray-400 hover:bg-purple-600/20 hover:text-purple-400 transition-all"
-                aria-label="GitHub"
+                aria-label="Facebook"
               >
-                <Github size={18} />
+                <Instagram size={18} />
               </a>
             </div>
           </div>

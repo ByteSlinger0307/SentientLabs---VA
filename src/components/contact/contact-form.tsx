@@ -46,7 +46,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-muted-foreground">contact@sentientlabs.ai</p>
+                  <p className="text-muted-foreground">labs.sentient@gmail.com</p>
                 </div>
               </div>
 
@@ -56,20 +56,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Office</h3>
-                  <p className="text-muted-foreground">
-                    123 AI Street, Tech Valley<br />
-                    San Francisco, CA 94105
-                  </p>
+                  <p className="text-muted-foreground">+91-8788775779</p>
                 </div>
               </div>
             </div>
@@ -87,7 +74,7 @@ export default function ContactForm() {
                   type="text"
                   {...register("name")}
                   className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -103,7 +90,7 @@ export default function ContactForm() {
                   type="email"
                   {...register("email")}
                   className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
-                  placeholder="john@company.com"
+                  placeholder="@company.com or @gmail.com"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
